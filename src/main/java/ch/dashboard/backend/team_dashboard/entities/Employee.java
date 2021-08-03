@@ -23,6 +23,9 @@ public class Employee {
     String name;
     String team;
     String personal_number;
+    String objective_name;
+    String objective_description;
+    double objective_completion; 
 
     public Employee(@NonNull String name, String team, String personal_number) {
         this.name = name;
