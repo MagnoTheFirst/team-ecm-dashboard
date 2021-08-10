@@ -33,6 +33,7 @@ public class ObjectivesService {
     public List<Entry> findByObjectiveName(String firstName){
         return objectiveRepo.findByObjective(firstName);
     }
+
     public List<Entry> findByObjectiveStatus(String firstName){
         return objectiveRepo.findByObjectiveStatus(firstName);
     }
@@ -50,6 +51,5 @@ public class ObjectivesService {
     public void removeAllEntries() {
         objectiveRepo.deleteAll();
     }
-
 
 }

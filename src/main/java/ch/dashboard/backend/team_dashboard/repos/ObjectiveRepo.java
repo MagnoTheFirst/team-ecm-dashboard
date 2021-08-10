@@ -14,23 +14,21 @@ import java.util.Optional;
 public interface ObjectiveRepo extends JpaRepository<Entry, Long> {
 
 
-    @Query("SELECT e FROM Entry e WHERE e.first_name = ?1")
+    @Query("SELECT e FROM Entry e WHERE e.firstName = ?1")
     List<Entry> findByFirstName(String firstname);
 
-    @Query("SELECT e FROM Entry e WHERE e.last_name = ?1")
+    @Query("SELECT e FROM Entry e WHERE e.lastName = ?1")
     List<Entry> findByLastName(String lastname);
 
 
     @Query("SELECT e FROM Entry e WHERE e.objective = ?1")
     List<Entry> findByObjective(String objevtive);
 
-    @Query("SELECT e FROM Entry e WHERE e.objective_status = ?1")
+    @Query("SELECT e FROM Entry e WHERE e.objectiveStatus = ?1")
     List<Entry> findByObjectiveStatus(String objevtive);
 
-    @Query("SELECT e FROM Entry e WHERE e.objective_type= ?1")
+    @Query("SELECT e FROM Entry e WHERE e.objectiveType= ?1")
     List<Entry> findByObjectiveType(String objevtiveType);
-
-
 
 
 }

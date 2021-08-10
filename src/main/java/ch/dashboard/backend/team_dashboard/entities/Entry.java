@@ -1,6 +1,7 @@
 package ch.dashboard.backend.team_dashboard.entities;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table
@@ -19,44 +20,48 @@ public class Entry {
     Long id;
 
 
-    String first_name;
-    String last_name;
+    String firstName;
+    String lastName;
     String objective;
     double achievment;
-    String objective_type;
-    String Objective_deadline;
-    boolean objective_status;
+    String objectiveType;
+    LocalDate objectiveDeadline;
+    boolean objectiveStatus;
     String comment;
 
     public Entry() {
 
     }
 
-    public Entry(String first_name, String last_name, String objective, double achievment, String objective_type, String objective_deadline, boolean objective_status, String comment) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Entry(String firstName, String lastName, String objective, double achievment, String objectiveType, LocalDate objectiveDeadline, boolean objectiveStatus, String comment) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.objective = objective;
         this.achievment = achievment;
-        this.objective_type = objective_type;
-        Objective_deadline = objective_deadline;
-        this.objective_status = objective_status;
+        this.objectiveType = objectiveType;
+        this.objectiveDeadline = objectiveDeadline;
+        this.objectiveStatus = objectiveStatus;
         this.comment = comment;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public Long getId() {
+        return id;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getObjective() {
@@ -71,36 +76,32 @@ public class Entry {
         return achievment;
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public void setAchievment(double achievment) {
         this.achievment = achievment;
     }
 
-    public String getObjective_type() {
-        return objective_type;
+    public String getObjectiveType() {
+        return objectiveType;
     }
 
-    public void setObjective_type(String objective_type) {
-        this.objective_type = objective_type;
+    public void setObjectiveType(String objectiveType) {
+        this.objectiveType = objectiveType;
     }
 
-    public String getObjective_deadline() {
-        return Objective_deadline;
+    public LocalDate getObjectiveDeadline() {
+        return objectiveDeadline;
     }
 
-    public void setObjective_deadline(String objective_deadline) {
-        Objective_deadline = objective_deadline;
+    public void setObjectiveDeadline(LocalDate objectiveDeadline) {
+        this.objectiveDeadline = objectiveDeadline;
     }
 
-    public boolean isObjective_status() {
-        return objective_status;
+    public boolean isObjectiveStatus() {
+        return objectiveStatus;
     }
 
-    public void setObjective_status(boolean objective_status) {
-        this.objective_status = objective_status;
+    public void setObjectiveStatus(boolean objectiveStatus) {
+        this.objectiveStatus = objectiveStatus;
     }
 
     public String getComment() {
@@ -115,13 +116,13 @@ public class Entry {
     public String toString() {
         return "Entry{" +
                 "id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", objective='" + objective + '\'' +
                 ", achievment=" + achievment +
-                ", objective_type='" + objective_type + '\'' +
-                ", Objective_deadline='" + Objective_deadline + '\'' +
-                ", objective_status=" + objective_status +
+                ", objectiveType='" + objectiveType + '\'' +
+                ", objectiveDeadline=" + objectiveDeadline +
+                ", objectiveStatus=" + objectiveStatus +
                 ", comment='" + comment + '\'' +
                 '}';
     }

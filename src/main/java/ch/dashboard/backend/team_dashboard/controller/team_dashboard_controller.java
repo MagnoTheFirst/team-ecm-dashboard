@@ -59,4 +59,5 @@ public class team_dashboard_controller {
 
     @DeleteMapping(path = "{deleteAllEntries}")
     public void removeAllEntry(){ objectivesService.removeAllEntries();}
+
 }
